@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Guarantee.Models.TheGuarantor>
+@{
+   // ViewData["Title"] = "Список ";
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Договоры поручительства</title>
+</head>
+<body>
+    <h3>Поручители</h3>
+    <table>
+        <tr>
+            <td>ФИО</td>
+            <td>Адрес</td>
+            <td>Номер телефона</td>
+            <td></td>
+        </tr>
+        @foreach (var theGuarantor in Model)
+        {
+                <tr>
+                    <td>@theGuarantor.FIO</td>
+                    <td>@theGuarantor.Address</td>
+                    <td>@theGuarantor.PhoneNumber</td>
+                    <td><a href="~/Home/Agreement/@theGuarantor.Id">Договор</a></td>
+                </tr>
+        }
+    </table>
+</body>
+</html>

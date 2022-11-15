@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Оформление договор</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформления договора</h3>
+        <p> Заполните следующие поля:</p>
+        <form method="post">
+            <input type="hidden" value="@ViewBag.GuaranteeAgreementId" name="GuaranteeAgreementId" />
+            <table>
+                <tr>
+                    <td>Номер договора:</td>
+                    <td><input type="text" name="NumberOfContract" /> </td>
+                </tr>
+                <tr>
+                    <td>Дата:</td>
+                    <td><input type="text" name="DateOfContract" /></td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+
